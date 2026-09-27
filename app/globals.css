@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #08090A;
+  color: #EDEFEA;
+}
+
+::selection {
+  background-color: #AEEF3F;
+  color: #08090A;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+.snap-row {
+  scrollbar-width: thin;
+  scrollbar-color: #33372F transparent;
+}
+.snap-row::-webkit-scrollbar { height: 6px; }
+.snap-row::-webkit-scrollbar-thumb { background-color: #33372F; border-radius: 999px; }
+
+.focus-ring:focus-visible {
+  outline: 2px solid #AEEF3F;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.font-tabular { font-variant-numeric: tabular-nums; }

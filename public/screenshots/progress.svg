@@ -1,0 +1,43 @@
+<svg width="400" height="844" viewBox="0 0 400 844" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="844" fill="#0B0D0B"/>
+  <text x="28" y="72" fill="#EDEFEA" font-family="Arial, sans-serif" font-size="24" font-weight="700">Napredak</text>
+
+  <g>
+    <rect x="28" y="100" width="160" height="88" rx="16" fill="#121412" stroke="#232722"/>
+    <text x="48" y="132" fill="#9CA69A" font-family="Arial, sans-serif" font-size="12">Tjelesna masa</text>
+    <text x="48" y="164" fill="#EDEFEA" font-family="Arial, sans-serif" font-size="24" font-weight="700">78.4 kg</text>
+  </g>
+  <g>
+    <rect x="212" y="100" width="160" height="88" rx="16" fill="#121412" stroke="#232722"/>
+    <text x="232" y="132" fill="#9CA69A" font-family="Arial, sans-serif" font-size="12">BMI</text>
+    <text x="232" y="164" fill="#AEEF3F" font-family="Arial, sans-serif" font-size="24" font-weight="700">23.1</text>
+  </g>
+
+  <rect x="28" y="212" width="344" height="220" rx="18" fill="#121412" stroke="#232722"/>
+  <text x="48" y="244" fill="#EDEFEA" font-family="Arial, sans-serif" font-size="14" font-weight="700">Poslednja 3 mjeseca</text>
+  <polyline points="48,380 100,368 152,372 204,340 256,330 308,300 352,290" fill="none" stroke="#AEEF3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#AEEF3F">
+    <circle cx="48" cy="380" r="3.5"/>
+    <circle cx="100" cy="368" r="3.5"/>
+    <circle cx="152" cy="372" r="3.5"/>
+    <circle cx="204" cy="340" r="3.5"/>
+    <circle cx="256" cy="330" r="3.5"/>
+    <circle cx="308" cy="300" r="3.5"/>
+    <circle cx="352" cy="290" r="4.5"/>
+  </g>
+  <line x1="48" y1="410" x2="352" y2="410" stroke="#232722"/>
+
+  <text x="28" y="472" fill="#EDEFEA" font-family="Arial, sans-serif" font-size="14" font-weight="700">Istorija treninga</text>
+  <g>
+    <rect x="28" y="488" width="344" height="56" rx="12" fill="#121412" stroke="#232722"/>
+    <text x="46" y="512" fill="#EDEFEA" font-family="Arial, sans-serif" font-size="13">Leg Day</text>
+    <text x="46" y="530" fill="#9CA69A" font-family="Arial, sans-serif" font-size="11">Juče • 52 min</text>
+    <text x="335" y="522" fill="#AEEF3F" font-family="Arial, sans-serif" font-size="12">↑ 2.5 kg</text>
+  </g>
+  <g>
+    <rect x="28" y="552" width="344" height="56" rx="12" fill="#121412" stroke="#232722"/>
+    <text x="46" y="576" fill="#EDEFEA" font-family="Arial, sans-serif" font-size="13">Push Day</text>
+    <text x="46" y="594" fill="#9CA69A" font-family="Arial, sans-serif" font-size="11">Prije 3 dana • 41 min</text>
+    <text x="335" y="586" fill="#9CA69A" font-family="Arial, sans-serif" font-size="12">= 0 kg</text>
+  </g>
+</svg>
