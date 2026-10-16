@@ -1,73 +1,37 @@
-# Trening — web sajt aplikacije
+# Repwise: web sajt
 
-Marketinški sajt za Android fitness aplikaciju **Trening**. Napravljen u
-Next.js 14 (App Router), TypeScript-u i Tailwind CSS-u, bez nepotrebnih
-dependency-ja (nema animacione biblioteke — fade-in efekti su rađeni preko
-`IntersectionObserver`-a u `components/Reveal.tsx`).
+Zvanični sajt za Android aplikaciju Repwise. Next.js 16, React 19, TypeScript, Tailwind CSS 3.
 
 ## Pokretanje
 
-```bash
-npm install
-npm run dev
-```
+    npm install
+    npm run dev        # http://localhost:3000
+    npm run build      # produkcioni build
+    npm run typecheck  # TypeScript provjera
+    npm run lint
 
-Sajt se otvara na `http://localhost:3000`.
+## Šta gdje mijenjaš
 
-Za produkciju:
+| Šta | Gdje |
+| --- | --- |
+| Novi APK | zamijeni `public/downloads/repwise-latest.apk` (ime fajla ostaje isto) |
+| Verzija, datum izdanja | `config/app.ts` (`version`, `versionCode`, `releaseDate`) |
+| Veličina i SHA-256 APK-a | automatski se čitaju iz fajla pri buildu |
+| Changelog | `config/changelog.ts` (novi unos ide na vrh liste) |
+| Screenshotovi | `public/screenshots/*.webp` (1080×2290, isti nazivi), alt tekstovi u `config/content.ts` |
+| Logo / ikonice | `public/brand/`, `app/icon.svg`, `app/apple-icon.png` |
+| OG slika | `public/og/repwise-og.png` (1200×630) |
+| Tekstovi | `config/content.ts` |
+| Email za podršku | `config/app.ts` (`supportEmail`) |
+| Politika privatnosti | `config/privacy.ts` (postavi `reviewed: true` kad potvrdiš sadržaj) |
+| Domen | env varijabla `NEXT_PUBLIC_SITE_URL` na Vercelu (npr. `https://repwise.app`) |
 
-```bash
-npm run build
-npm run start
-```
+## Izdavanje nove verzije
 
-## Struktura
+1. Zamijeni `public/downloads/repwise-latest.apk`.
+2. U `config/app.ts` promijeni `version`, `versionCode`, `releaseDate`.
+3. Dodaj unos na vrh `config/changelog.ts`.
+4. `git add . && git commit -m "Repwise 1.1" && git push` (Vercel sam deploy-uje).
 
-```
-app/
-  layout.tsx          — fontovi (Manrope + Inter), SEO/OpenGraph metadata
-  page.tsx             — sastavlja sve sekcije
-  privatnost/page.tsx   — placeholder stranica
-  kontakt/page.tsx      — placeholder stranica
-  globals.css
-components/
-  Header.tsx           — sticky nav + mobilni hamburger meni
-  Hero.tsx
-  Features.tsx          — bento grid funkcija
-  HowItWorks.tsx
-  Showcase.tsx          — naizmjenični tekst/telefon prikaz
-  ScreenshotGallery.tsx — horizontalni carousel (scroll-snap)
-  Download.tsx
-  Footer.tsx
-  PhoneMockup.tsx       — realistični phone-frame, prima bilo koji src
-  Reveal.tsx            — scroll-reveal wrapper (bez biblioteka)
-lib/
-  content.ts            — SAV tekst sajta na jednom mjestu (srpski, ijekavica)
-public/
-  screenshots/           — placeholder SVG ekrani aplikacije (vidi napomenu ispod)
-  downloads/              — ovdje ide trening.apk (vidi downloads/README.md)
-```
-
-## Šta treba zamijeniti prije objave
-
-1. **APK fajl** — `public/downloads/trening.apk` (uputstvo u tom folderu).
-2. **Screenshotovi** — `public/screenshots/*.svg` su ilustrovani placeholderi
-   u stilu sajta, ne pravi snimci ekrana. Uputstvo za zamjenu je u
-   `public/screenshots-source/README.md`.
-3. **OG slika** — `app/layout.tsx` referencira `/og-image.png` (1200×630px) koji
-   trenutno ne postoji; dodaj ga u `public/`.
-4. **Kontakt e-mail i politika privatnosti** — `app/kontakt/page.tsx` i
-   `app/privatnost/page.tsx` sadrže placeholder tekst.
-5. Ako se promijeni ime ili domen aplikacije, ažuriraj `seo.url` u
-   `lib/content.ts`.
-
-## Dizajn
-
-- Pozadina: skoro crna (`#08090A` / `#0B0D0B`), bez čistog crnog.
-- Akcenat: kontrolisana volt-lime (`#AEEF3F`), korišćena namjerno i rijetko —
-  ne farba se svaki element.
-- Tipografija: Manrope (naslovi) + Inter (tekst), preko `next/font/google`.
-- Animacije: suptilne (fade-up na scroll, mali parallax na hero telefonu),
-  poštuje `prefers-reduced-motion`.
-- Sve statistike, ocjene i recenzije na sajtu su namjerno izostavljene —
-  dodaj ih tek kad budu stvarne.
+Napomena: svaki novi APK ulazi u Git istoriju (~20 MB). Ako repozitorijum postane
+težak, APK se može hostovati na GitHub Releases, a `app.apkUrl` usmjeriti na taj link.

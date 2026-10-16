@@ -1,51 +1,51 @@
-import { hero } from "@/lib/content";
-import PhoneMockup from "./PhoneMockup";
+import Link from "next/link";
+import { app } from "@/config/app";
+import { getApkInfo } from "@/lib/apk";
+import { formatFileSize } from "@/lib/format";
+import DownloadButton from "./DownloadButton";
+import PhoneFrame from "./PhoneFrame";
 
 export default function Hero() {
+  const { sizeBytes } = getApkInfo();
   return (
-    <section id="pocetna" className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden">
-      <div className="mx-auto max-w-content px-5 md:px-8 grid md:grid-cols-[1.05fr_0.95fr] gap-16 items-center">
+    <section id="pocetna" className="overflow-x-clip">
+      <div className="mx-auto grid max-w-page items-center gap-14 px-5 pb-20 pt-14 md:px-8 md:pb-28 md:pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
         <div>
-          <span className="inline-flex items-center gap-2 text-xs font-medium text-volt border border-volt/30 bg-volt/[0.06] rounded-full px-3 py-1">
-            {hero.eyebrow}
-          </span>
-
-          <h1 className="mt-6 font-display font-extrabold text-display-xl text-bone text-balance">
-            {hero.title}
+          <p className="hero-in font-display text-sm font-bold tracking-[0.22em] text-lime">{app.tagline}</p>
+          <h1 className="hero-in hero-in-2 mt-5 max-w-[14ch] text-balance font-display text-h1 font-extrabold text-fg">
+            Trening koji pamti tvoj napredak.
           </h1>
-
-          <p className="mt-6 text-lg text-bone-muted max-w-[46ch] leading-relaxed">
-            {hero.subtitle}
+          <p className="hero-in hero-in-3 mt-6 max-w-[44ch] text-lg leading-relaxed text-muted">
+            Planiraj treninge, bilježi serije i opterećenje i na jednom mjestu pregledaj kako napreduješ.
           </p>
-
-          <div className="mt-9 flex flex-col sm:flex-row gap-3.5">
-            <a
-              href="#preuzmi"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-volt text-ink-950 px-6 py-3.5 text-sm font-semibold hover:bg-volt-dim transition-colors focus-ring"
+          <div className="hero-in hero-in-4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <DownloadButton size="lg" />
+            <Link
+              href="/#aplikacija"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-line px-7 text-base font-semibold text-fg transition-colors hover:border-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime"
             >
-              {hero.ctaPrimary}
-            </a>
-            <a
-              href="#screenshotovi"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-ink-500 text-bone px-6 py-3.5 text-sm font-semibold hover:border-bone-muted transition-colors focus-ring"
-            >
-              {hero.ctaSecondary}
-            </a>
+              Pogledaj aplikaciju
+            </Link>
           </div>
+          <p className="hero-in hero-in-4 mt-5 text-sm text-muted">
+            Verzija {app.version} za Android {app.minimumAndroid} i novije, APK {formatFileSize(sizeBytes)}.
+          </p>
         </div>
 
-        <div className="relative flex justify-center md:justify-end">
-          <div className="absolute -inset-x-10 -inset-y-14 [mask-image:radial-gradient(closest-side,black,transparent)] pointer-events-none">
-            <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(174,239,63,0.10),transparent_65%)]" />
-          </div>
-
-          <div className="relative hidden sm:block -mr-16 opacity-70 translate-y-6">
-            <PhoneMockup src="/screenshots/progress.svg" alt="Grafikon napretka u aplikaciji Trening" tilt={-6} />
-          </div>
-
-          <div className="relative z-10 motion-safe:animate-drift">
-            <PhoneMockup src="/screenshots/workout.svg" alt="Ekran toka treninga u aplikaciji Trening" priority />
-          </div>
+        <div className="hero-in hero-in-3 relative mx-auto flex w-full max-w-[560px] justify-center lg:justify-end">
+          <PhoneFrame
+            src="/screenshots/pocetna.webp"
+            alt="Početni ekran aplikacije Repwise sa sedmičnim ritmom i dugmetom Započni trening"
+            priority
+            sizes="(min-width: 1024px) 320px, 70vw"
+            className="relative z-10 w-[min(70vw,300px)] lg:w-[320px]"
+          />
+          <PhoneFrame
+            src="/screenshots/trening-u-toku.webp"
+            alt="Ekran treninga u toku sa listom vježbi u aplikaciji Repwise"
+            sizes="260px"
+            className="absolute left-2 top-16 hidden w-[240px] sm:block lg:left-0 xl:left-4 xl:w-[260px]"
+          />
         </div>
       </div>
     </section>

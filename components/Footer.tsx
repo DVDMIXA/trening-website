@@ -1,26 +1,41 @@
-import { footer } from "@/lib/content";
+import Link from "next/link";
+import { app } from "@/config/app";
+import { Wordmark } from "./Logo";
+
+const links = [
+  { label: "Download", href: "/download" },
+  { label: "Changelog", href: "/changelog" },
+  { label: "Privacy", href: "/privacy" },
+] as const;
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink-700 py-12">
-      <div className="mx-auto max-w-content px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2.5">
-          <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect width="28" height="28" rx="8" fill="#AEEF3F" />
-            <path d="M7 14h2.5l1.8-4.6L14 18l2.2-4h4.8" stroke="#08090A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          </svg>
-          <span className="font-display font-bold text-bone">Trening</span>
+    <footer className="border-t border-line">
+      <div className="mx-auto flex max-w-page flex-col gap-10 px-5 py-12 md:flex-row md:items-start md:justify-between md:px-8">
+        <div>
+          <Wordmark />
+          <p className="mt-3 font-display text-xs font-bold tracking-[0.22em] text-muted">{app.tagline}</p>
         </div>
 
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          {footer.links.map((link) => (
-            <a key={link.label} href={link.href} className="text-sm text-bone-muted hover:text-bone transition-colors focus-ring">
-              {link.label}
-            </a>
-          ))}
+        <nav aria-label="Footer">
+          <ul className="flex flex-wrap gap-x-8 gap-y-3">
+            {links.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="inline-flex min-h-8 items-center text-sm text-muted transition-colors hover:text-fg">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <a href={`mailto:${app.supportEmail}`} className="inline-flex min-h-8 items-center text-sm text-muted transition-colors hover:text-fg">
+                Support
+              </a>
+            </li>
+          </ul>
         </nav>
-
-        <p className="text-xs text-bone-faint">{footer.copyright}</p>
+      </div>
+      <div className="border-t border-line">
+        <p className="mx-auto max-w-page px-5 py-6 text-xs text-muted md:px-8">© {new Date().getFullYear()} Repwise</p>
       </div>
     </footer>
   );
