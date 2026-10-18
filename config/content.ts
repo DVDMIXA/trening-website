@@ -26,7 +26,7 @@ export const features = [
   },
   {
     title: "Fotografije",
-    text: "Dodaj fotografije napretka i prati kako se mijenjaš kroz vrijeme.",
+    text: "Dodaj fotografije napretka i uporedi ih u prikazu Prije i poslije.",
   },
 ] as const;
 

@@ -16,19 +16,19 @@ export const app = {
   name: "Repwise",
   tagline: "TRAIN. TRACK. PROGRESS.",
 
-  // Iz AndroidManifest.xml dostavljenog APK-a (v1.0, versionCode 1, minSdk 24).
-  version: "1.0",
-  versionCode: 1,
+  // Iz AndroidManifest.xml dostavljenog APK-a (v1.1.0, versionCode 2, minSdk 24).
+  version: "1.1.0",
+  versionCode: 2,
   minimumAndroid: "7.0",
 
   // TODO: potvrdi stvarni datum izdanja ove verzije (ISO format YYYY-MM-DD).
-  releaseDate: "2026-10-16",
+  releaseDate: "2026-10-18",
 
   // Stabilna putanja. Uvijek zamijeni samo sadržaj ovog fajla.
   apkUrl: "/downloads/repwise-latest.apk",
   apkFileName: "Repwise.apk",
   // Rezerva ako fajl nije dostupan pri buildu (normalno se čita iz fajla).
-  apkFileSizeBytes: 21_250_833,
+  apkFileSizeBytes: 21_267_657,
 
   // TODO: zamijeni pravom adresom za podršku (.example je namjerni placeholder).
   supportEmail: "support@repwise.example",

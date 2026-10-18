@@ -6,12 +6,13 @@
 export const privacy = {
   reviewed: false,
 
-  /** Potvrđeno iz AndroidManifest.xml i koda aplikacije (verzija 1.0). */
+  /** Potvrđeno iz AndroidManifest.xml i koda aplikacije (verzija 1.1.0). */
   facts: {
     storedOnDevice: [
       "Planovi, programi i istorija treninga (serije, kilaža, ponavljanja, bilješke).",
       "Profil: visina, tjelesna masa, ciljevi i profilna fotografija.",
       "Fotografije napretka koje sam dodaš u aplikaciju.",
+      "Rezervne kopije (ZIP) koje sam izvezeš. Aplikacija upozorava da kopija nije šifrovana.",
     ],
     permissions: [
       "Obavještenja: za podsjetnike na treninge.",
