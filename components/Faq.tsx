@@ -3,14 +3,14 @@ import { app } from "@/config/app";
 
 const items = [
   {
-    q: "Kako instalirati Repwise?",
+    q: "Kako instalirati XQRep?",
     a: (
       <>Preuzmi APK na telefon, otvori fajl i, ako Android to zatraži, dozvoli instalaciju iz izvora iz kojeg si ga preuzeo. Zatim potvrdi instalaciju.</>
     ),
   },
   {
     q: "Kako ažurirati aplikaciju?",
-    a: <>Već imaš Repwise? Preuzmi novu verziju i instaliraj je preko postojeće aplikacije.</>,
+    a: <>Već imaš XQRep? Preuzmi novu verziju i instaliraj je preko postojeće aplikacije.</>,
   },
   {
     q: "Koja Android verzija je potrebna?",

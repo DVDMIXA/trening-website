@@ -1,12 +1,12 @@
 /**
- * Politika privatnosti: SAMO tehničke činjenice potvrđene iz APK-a (v1.0).
+ * Politika privatnosti: SAMO tehničke činjenice potvrđene iz APK-a.
  * Dok je `reviewed` false, stranica prikazuje napomenu da je nacrt i
  * ne indeksira se. Kad potvrdiš sve stavke iz `toConfirm`, postavi `reviewed: true`.
  */
 export const privacy = {
   reviewed: false,
 
-  /** Potvrđeno iz AndroidManifest.xml i koda aplikacije (verzija 1.1.0). */
+  /** Potvrđeno iz AndroidManifest.xml i koda aplikacije (verzija 1.4.1). */
   facts: {
     storedOnDevice: [
       "Planovi, programi i istorija treninga (serije, kilaža, ponavljanja, bilješke).",
@@ -16,6 +16,7 @@ export const privacy = {
     ],
     permissions: [
       "Obavještenja: za podsjetnike na treninge.",
+      "Tačni alarmi: da se podsjetnici oglase u zakazano vrijeme.",
       "Prijem događaja pokretanja uređaja: da se podsjetnici obnove nakon restarta telefona.",
     ],
     noInternetPermission:

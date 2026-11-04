@@ -6,7 +6,7 @@ import { app } from "@/config/app";
 
 export const metadata: Metadata = {
   title: "Privatnost",
-  description: "Kako Repwise postupa sa podacima na tvom uređaju.",
+  description: "Kako XQRep postupa sa podacima na tvom uređaju.",
   alternates: { canonical: "/privacy" },
   // Dok politika nije potvrđena, ne indeksirati.
   robots: privacy.reviewed ? undefined : { index: false, follow: true },
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
           <section className="mt-12">
             <h2 className="font-display text-2xl font-bold text-fg">Podaci na tvom uređaju</h2>
-            <p className="mt-4 leading-relaxed text-muted">Repwise čuva sljedeće podatke lokalno, u aplikaciji na telefonu:</p>
+            <p className="mt-4 leading-relaxed text-muted">XQRep čuva sljedeće podatke lokalno, u aplikaciji na telefonu:</p>
             <List items={facts.storedOnDevice} />
           </section>
 

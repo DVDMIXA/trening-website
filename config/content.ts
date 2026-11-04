@@ -14,7 +14,7 @@ export const features = [
   },
   {
     title: "Vježbe",
-    text: "Katalog vježbi sa pretragom. Traži po stručnim engleskim nazivima ili terminima koje već koristiš na našem jeziku.",
+    text: "Katalog vježbi sa pretragom i animacijama. Traži po stručnim engleskim nazivima ili terminima koje već koristiš na našem jeziku.",
   },
   {
     title: "Prati napredak",
@@ -91,5 +91,5 @@ export const steps = [
 export const installSteps = [
   "Preuzmi APK fajl na telefon.",
   "Otvori fajl i, ako Android to zatraži, dozvoli instalaciju iz ovog izvora.",
-  "Potvrdi instalaciju i otvori Repwise.",
+  "Potvrdi instalaciju i otvori XQRep.",
 ] as const;

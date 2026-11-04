@@ -7,7 +7,7 @@ export type ApkInfo = { sizeBytes: number; sha256: string | null };
 
 /**
  * Čita stvarnu veličinu i SHA-256 APK fajla pri buildu, pa se ti podaci
- * sami osvježe kad zamijeniš public/downloads/repwise-latest.apk.
+ * sami osvježe kad zamijeniš public/downloads/xqrep-latest.apk.
  * Koristi se samo u Server Components (statički prerender).
  */
 export function getApkInfo(): ApkInfo {

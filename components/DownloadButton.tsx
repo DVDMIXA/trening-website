@@ -14,7 +14,7 @@ type Props = {
   className?: string;
 };
 
-export default function DownloadButton({ children = "Preuzmi Repwise za Android", size = "md", className = "" }: Props) {
+export default function DownloadButton({ children = "Preuzmi XQRep za Android", size = "md", className = "" }: Props) {
   const sizes = size === "lg" ? "min-h-14 px-8 text-base" : "min-h-12 px-6 text-[15px]";
   return (
     <a

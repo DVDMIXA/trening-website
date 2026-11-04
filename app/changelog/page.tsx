@@ -7,7 +7,7 @@ import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Changelog",
-  description: "Spisak izmjena u svim verzijama aplikacije Repwise.",
+  description: "Spisak izmjena u svim verzijama aplikacije XQRep.",
   alternates: { canonical: "/changelog" },
 };
 

@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-ink/80 backdrop-blur-md">
       <div className="relative mx-auto flex h-16 max-w-page items-center justify-between px-5 md:px-8">
-        <Link href="/" aria-label="Repwise, početna" className="rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime">
+        <Link href="/" aria-label="XQRep, početna" className="rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime">
           <Wordmark />
         </Link>
 

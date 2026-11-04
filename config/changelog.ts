@@ -8,8 +8,20 @@ export type ChangelogEntry = {
 /** Najnovija verzija ide prva. Dodaj novi objekat na vrh liste. */
 export const changelog: ChangelogEntry[] = [
   {
+    version: "1.4.1",
+    // TODO: potvrdi datum (isti kao app.releaseDate) i dopuni izmjene.
+    date: "2026-11-04",
+    changes: [
+      "Aplikacija je preimenovana u XQRep, uz novi logo.",
+      "Animacije i ilustracije uz vježbe u katalogu.",
+      "Raspored treninga: planove možeš složiti u ciklus izabranim redoslijedom.",
+      "Tačniji podsjetnici na treninge (dozvola za tačne alarme).",
+      "Uređivanje i brisanje serija, treninga i mjerenja.",
+      "Izrezivanje profilne fotografije.",
+    ],
+  },
+  {
     version: "1.1.0",
-    // TODO: potvrdi datum (isti kao app.releaseDate).
     date: "2026-10-18",
     changes: [
       "Izvoz i vraćanje rezervne kopije podataka (ZIP).",
@@ -20,7 +32,6 @@ export const changelog: ChangelogEntry[] = [
   },
   {
     version: "1.0",
-    // TODO: potvrdi datum (isti kao app.releaseDate).
     date: "2026-10-16",
     changes: [
       "Prvo izdanje aplikacije.",

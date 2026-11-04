@@ -19,7 +19,7 @@ export default function Home() {
         data={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "Repwise",
+          name: "XQRep",
           description: "Android aplikacija za planiranje treninga, praćenje serija i opterećenja i pregled napretka.",
           applicationCategory: "HealthApplication",
           operatingSystem: `Android ${app.minimumAndroid}+`,
@@ -28,7 +28,7 @@ export default function Home() {
           url: app.siteUrl,
           downloadUrl: `${app.siteUrl}${app.apkUrl}`,
           fileSize: formatFileSize(sizeBytes),
-          image: `${app.siteUrl}/og/repwise-og.png`,
+          image: `${app.siteUrl}/og/xqrep-og.png`,
         }}
       />
       <Header />

@@ -1,19 +1,26 @@
+import Image from "next/image";
+
+/** X znak (ikonica). */
 export function LogoMark({ className = "h-7 w-auto" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 740 693" className={className} aria-hidden="true" focusable="false">
-      <path
-        fill="#A3FF3F"
-        d="M86 186 L86 464 L280 692 L280 425Z M0 2 L110 137 L555 137 L560 142 L497 224 L192 223 L559 691 L739 690 L476 348 L573 346 L731 152 L603 0Z"
-      />
+    <svg viewBox="0 0 878 574" className={className} aria-hidden="true" focusable="false">
+      <path fill="#F3F4F6" d="M190 572 L291 513 L455 406 L611 572 L813 573 L741 483 L605 326 L392 326 L266 476Z" />
+      <path fill="#F3F4F6" d="M877 0 L626 0 L504 160 L422 274 L638 275Z" />
+      <path fill="#A3FF3F" d="M322 0 L36 0 L252 247 L0 573 L149 573 L372 297 L466 175Z" />
     </svg>
   );
 }
 
+/** Glavni logo: XQRep wordmark (providan PNG, public/brand/xqrep-wordmark.png). */
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <LogoMark />
-      <span className="font-display text-xl font-bold tracking-tight text-fg">Repwise</span>
-    </span>
+    <Image
+      src="/brand/xqrep-wordmark.png"
+      alt="XQRep"
+      width={560}
+      height={118}
+      unoptimized
+      className={`h-7 w-auto ${className}`}
+    />
   );
 }

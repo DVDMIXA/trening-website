@@ -6,7 +6,7 @@ export default function Showcase() {
     <section id="aplikacija" className="border-t border-line">
       <div className="mx-auto max-w-page px-5 py-20 md:px-8 md:py-28">
         <h2 className="max-w-[18ch] text-balance font-display text-h2 font-bold text-fg" data-reveal>
-          Ovako izgleda Repwise
+          Ovako izgleda XQRep
         </h2>
         <p className="mt-5 max-w-[46ch] leading-relaxed text-muted" data-reveal>
           Stvarni ekrani aplikacije, bez uljepšavanja.

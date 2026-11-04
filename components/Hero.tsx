@@ -35,14 +35,14 @@ export default function Hero() {
         <div className="hero-in hero-in-3 relative mx-auto flex w-full max-w-[560px] justify-center lg:justify-end">
           <PhoneFrame
             src="/screenshots/pocetna.webp"
-            alt="Početni ekran aplikacije Repwise sa sedmičnim ritmom i dugmetom Započni trening"
+            alt="Početni ekran aplikacije XQRep sa dugmetom Napravi svoj program i pregledom sedmičnog ritma"
             priority
             sizes="(min-width: 1024px) 320px, 70vw"
             className="relative z-10 w-[min(70vw,300px)] lg:w-[320px]"
           />
           <PhoneFrame
             src="/screenshots/trening-u-toku.webp"
-            alt="Ekran treninga u toku sa listom vježbi u aplikaciji Repwise"
+            alt="Ekran treninga u toku sa listom vježbi u aplikaciji XQRep"
             sizes="260px"
             className="absolute left-2 top-16 hidden w-[240px] sm:block lg:left-0 xl:left-4 xl:w-[260px]"
           />

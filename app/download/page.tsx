@@ -11,8 +11,8 @@ import { getApkInfo } from "@/lib/apk";
 import { formatDate, formatFileSize } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Preuzmi Repwise za Android",
-  description: "Preuzmi najnoviji APK Repwise aplikacije za Android, uz uputstvo za instalaciju i ažuriranje.",
+  title: "Preuzmi XQRep za Android",
+  description: "Preuzmi najnoviji APK XQRep aplikacije za Android, uz uputstvo za instalaciju i ažuriranje.",
   alternates: { canonical: "/download" },
 };
 
@@ -34,7 +34,7 @@ export default function DownloadPage() {
           <div className="mx-auto grid max-w-page gap-12 px-5 pb-16 pt-14 md:px-8 md:pb-24 md:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
             <div>
               <LogoMark className="h-14 w-auto" />
-              <h1 className="mt-8 text-balance font-display text-h1 font-extrabold text-fg">Preuzmi Repwise</h1>
+              <h1 className="mt-8 text-balance font-display text-h1 font-extrabold text-fg">Preuzmi XQRep</h1>
               <p className="mt-5 max-w-[42ch] text-lg leading-relaxed text-muted">
                 Najnovija verzija za Android, direktno kao APK fajl.
               </p>
@@ -42,7 +42,7 @@ export default function DownloadPage() {
                 <DownloadButton size="lg">Preuzmi APK</DownloadButton>
               </div>
               <p className="mt-6 max-w-[46ch] text-sm leading-relaxed text-muted">
-                Već imaš Repwise? Preuzmi novu verziju i instaliraj je preko postojeće aplikacije. Šta je novo možeš
+                Već imaš XQRep? Preuzmi novu verziju i instaliraj je preko postojeće aplikacije. Šta je novo možeš
                 vidjeti u{" "}
                 <Link href="/changelog" className="text-fg underline underline-offset-4 hover:text-lime">
                   changelogu

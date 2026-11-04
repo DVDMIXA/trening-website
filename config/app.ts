@@ -1,7 +1,7 @@
 /**
  * Centralni podaci o aplikaciji i sajtu.
  * Kad izdaš novu verziju: promijeni `version`, `versionCode`, `releaseDate`
- * i zamijeni fajl public/downloads/repwise-latest.apk.
+ * i zamijeni fajl public/downloads/xqrep-latest.apk.
  * Veličina i SHA-256 APK-a se čitaju automatski iz fajla pri buildu.
  */
 
@@ -13,25 +13,25 @@ const siteUrl =
   (vercelProd ? `https://${vercelProd}` : "http://localhost:3000");
 
 export const app = {
-  name: "Repwise",
+  name: "XQRep",
   tagline: "TRAIN. TRACK. PROGRESS.",
 
-  // Iz AndroidManifest.xml dostavljenog APK-a (v1.1.0, versionCode 2, minSdk 24).
-  version: "1.1.0",
-  versionCode: 2,
+  // Iz AndroidManifest.xml dostavljenog APK-a (v1.4.1, versionCode 6, minSdk 24).
+  version: "1.4.1",
+  versionCode: 6,
   minimumAndroid: "7.0",
 
   // TODO: potvrdi stvarni datum izdanja ove verzije (ISO format YYYY-MM-DD).
-  releaseDate: "2026-10-18",
+  releaseDate: "2026-11-04",
 
   // Stabilna putanja. Uvijek zamijeni samo sadržaj ovog fajla.
-  apkUrl: "/downloads/repwise-latest.apk",
-  apkFileName: "Repwise.apk",
+  apkUrl: "/downloads/xqrep-latest.apk",
+  apkFileName: "XQRep.apk",
   // Rezerva ako fajl nije dostupan pri buildu (normalno se čita iz fajla).
-  apkFileSizeBytes: 21_267_657,
+  apkFileSizeBytes: 47_145_540,
 
   // TODO: zamijeni pravom adresom za podršku (.example je namjerni placeholder).
-  supportEmail: "support@repwise.example",
+  supportEmail: "support@xqrep.example",
 
   siteUrl,
 } as const;

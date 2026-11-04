@@ -35,7 +35,7 @@ export default function Footer() {
         </nav>
       </div>
       <div className="border-t border-line">
-        <p className="mx-auto max-w-page px-5 py-6 text-xs text-muted md:px-8">© {new Date().getFullYear()} Repwise</p>
+        <p className="mx-auto max-w-page px-5 py-6 text-xs text-muted md:px-8">© {new Date().getFullYear()} XQRep</p>
       </div>
     </footer>
   );

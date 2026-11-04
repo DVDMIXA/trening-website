@@ -17,29 +17,29 @@ const inter = Inter({
   display: "swap",
 });
 
-const title = "Repwise – Android aplikacija za praćenje treninga";
-const description = "Planiraj treninge, prati serije, opterećenje i napredak uz Repwise za Android.";
+const title = "XQRep – Android aplikacija za praćenje treninga";
+const description = "Planiraj treninge, prati serije, opterećenje i napredak uz XQRep za Android.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(app.siteUrl),
-  title: { default: title, template: "%s – Repwise" },
+  title: { default: title, template: "%s – XQRep" },
   description,
-  applicationName: "Repwise",
+  applicationName: "XQRep",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "Repwise",
+    siteName: "XQRep",
     locale: "sr_RS",
     title,
     description,
     url: "/",
-    images: [{ url: "/og/repwise-og.png", width: 1200, height: 630, alt: "Repwise: Train. Track. Progress." }],
+    images: [{ url: "/og/xqrep-og.png", width: 1200, height: 630, alt: "XQRep: Train. Track. Progress." }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og/repwise-og.png"],
+    images: ["/og/xqrep-og.png"],
   },
 };
 

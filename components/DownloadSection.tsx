@@ -13,10 +13,10 @@ export default function DownloadSection() {
         <div data-reveal>
           <h2 className="max-w-[14ch] text-balance font-display text-h2 font-bold text-fg">Spreman za sljedeći trening?</h2>
           <p className="mt-5 max-w-[42ch] text-lg leading-relaxed text-muted">
-            Preuzmi Repwise direktno na svoj Android uređaj.
+            Preuzmi XQRep direktno na svoj Android uređaj.
           </p>
           <div className="mt-9">
-            <DownloadButton size="lg">Preuzmi Repwise za Android</DownloadButton>
+            <DownloadButton size="lg">Preuzmi XQRep za Android</DownloadButton>
           </div>
           <p className="mt-5 text-sm text-muted">
             Verzija {app.version}, Android {app.minimumAndroid} ili novije, {formatFileSize(sizeBytes)}.{" "}
@@ -39,7 +39,7 @@ export default function DownloadSection() {
             ))}
           </ol>
           <p className="mt-7 border-t border-line pt-5 text-sm leading-relaxed text-muted">
-            Već imaš Repwise? Preuzmi novu verziju i instaliraj je preko postojeće aplikacije.
+            Već imaš XQRep? Preuzmi novu verziju i instaliraj je preko postojeće aplikacije.
           </p>
         </div>
       </div>
